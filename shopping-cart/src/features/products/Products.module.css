@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  overflow-x: hidden;
+}
+
+header {
+  text-align: left;
+  font-size: 20px;
+  color: blueviolet;
+  width: 80%;
+  margin-left: 400px;
+  margin-top: 100px;
+}
+
+.normalImg {
+  width: 200x;
+  height: 300px;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  /* border:3px solid rgb(90, 80, 231); */
+  width: 80%;
+  margin-left: 300px;
+ 
+}
+.card {
+  list-style-type: none;
+  text-align: center;
+  /* border:3px solid rgb(231, 80, 173); */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+.shipping {
+  background-color: black;
+  color: whitesmoke;
+  text-align: right;
+  font-size: 12px;
+  position: relative;
+  left: 62px;
+  padding: 3px;
+}
+.addBtn {
+  width: 80%;
+  background-color: black;
+  height: 50px;
+  color: whitesmoke;
+  font-size: 15px;
+  outline: none;
+  margin-top: 5px;
+  border: none;
+}
+
+.card:hover .addBtn {
+  background-color: rgb(199, 173, 25);
+}
+
+
+.yellowline {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: #f0be51;
+  margin-left: 125px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 20px;
+}
+.installPrice{
+    color:gray;
+    font-weight: bold;
+  }
