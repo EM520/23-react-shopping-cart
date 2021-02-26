@@ -49,20 +49,24 @@ export default function Cart() {
         <div className={styles.cartlist}>
           <ul>
             {cart.map((item) => (
+                
+                
               <li className={styles.cartItem}>
-                <img src={item.img.thumb} />
-                {item.availableSizes[0]} | {item.style} <br />
-                {item.title} ${item.price.toFixed(2)}
-                <br />
-                Quantity:{item.qty}
-               
-                <button onClick={() => dispatch(removeFromCart(item))}>
+                <img className={styles.imgThumb}src={item.img.thumb} />
+                <div className={styles.cartP} >
+                <p>{item.title}</p>
+                <p>{item.availableSizes[0]} | {item.style}</p> <br />
+                 <p className={styles.price}> ${item.price.toFixed(2)}</p> <br/>
+                
+                <p>Quantity:{item.qty}</p>  <br />
+                </div>
+                <button className={styles.delBtn} onClick={() => dispatch(removeFromCart(item))}>
                   X
                 </button>
-                <button className={item.qty
-                    ?styles.hiddenDere:""}onClick={() =>dispatch(decreProduct(item))}>-</button>
-                <button onClick={() =>dispatch(increProduct(item))}>+</button>
+                <button className={styles.btn} onClick={() =>dispatch(decreProduct(item))}>-</button>
+                <button className={styles.btn} onClick={() =>dispatch(increProduct(item))}>+</button>
               </li>
+              
             ))}
           </ul>
         </div>
