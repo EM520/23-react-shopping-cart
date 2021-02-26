@@ -28,13 +28,13 @@ export default function Products() {
         {products.map((item) => (
           <Card
             product={item}
-            normalImg={item.img.normal}
-            title={item.title}
-            price={item.price}
-            currencyFormat={item.currencyFormat}
-            installments={item.installments}
+            // normalImg={item.img.normal}
+            // title={item.title}
+            // price={item.price}
+            // currencyFormat={item.currencyFormat}
+            // installments={item.installments}
             installmentPrice={installmentPrice(item.price, item.installments)}
-            isFreeShipping={item.isFreeShipping}
+            // isFreeShipping={item.isFreeShipping}
           />
         ))}
       </div>

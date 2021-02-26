@@ -6,8 +6,10 @@ import cartReducer from "../features/cart/cartSlice";
 export default configureStore({
   reducer: {
     counter: counterReducer,
-    product: productsReducer,
+    products: productsReducer,
     cart: cartReducer,
     cartV: cartReducer,
+    total: cartReducer,
+    totalP: cartReducer
   },
 });

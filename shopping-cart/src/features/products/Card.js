@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { addCart } from "../cart/cartSlice";
 export default function Card(props) {
   const dispatch = useDispatch();
+
   return (
     <ul className={styles.card}>
       <li key={props.id}>
@@ -13,14 +14,19 @@ export default function Card(props) {
           ""
         )}{" "}
         <br />
-        <img className={styles.normalImg} src={props.normalImg} /> <br />
-        <p>{props.title}</p> <br />
+        <img className={styles.normalImg} src={props.product.img.normal} />{" "}
+        <br />
+        <p>{props.product.title}</p> <br />
         {<p className={styles.yellowline}></p>}
         <br />
-        {props.currencyFormat}
-        {<span className={styles.price}>{props.price}</span>} <br />
-        {<span className={styles.installPrice}>or {props.installments} x {props.currencyFormat}
-        {props.installmentPrice}</span>}
+        {props.product.currencyFormat}
+        {<span className={styles.price}>{props.product.price}</span>} <br />
+        {
+          <span className={styles.installPrice}>
+            or {props.product.installments} x {props.product.currencyFormat}
+            {props.installmentPrice}
+          </span>
+        }
         <br />
         <button
           className={styles.addBtn}
